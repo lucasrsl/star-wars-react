@@ -1,0 +1,44 @@
+{
+    "chars": [
+        {
+            "name": "Luke Skywalker",
+            "gender": "m",
+            "order": "Jedi",
+            "picture": "luke"
+        },{
+            "name": "Rey",
+            "gender": "w",
+            "order": "Jedi",
+            "picture": "rey"
+        },{
+            "name": "Obi-Wan Kenobi",
+            "gender": "m",
+            "order": "Jedi",
+            "picture": "obi"
+        },{
+            "name": "Depa Billaba",
+            "gender": "w",
+            "order": "Jedi",
+            "picture": "depa"
+        },{
+            "name": "Darth Vader",
+            "gender": "m",
+            "order": "Sith",
+            "picture": "darthV"
+        },{
+            "name": "Sidious",
+            "gender": "m",
+            "order": "Sith",
+            "picture": "sidious"
+        },{
+            "name": "Asajj Ventress",
+            "gender": "w",
+            "order": "Sith",
+            "picture": "asajj"
+        },{
+            "name": "Darth Zannah",
+            "gender": "w",
+            "order": "Sith",
+            "picture": "darthZ"
+        }]
+}
