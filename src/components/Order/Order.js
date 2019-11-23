@@ -37,7 +37,7 @@ const Order = (props) => {
                             order: "sith"
                         }]
                     }}>
-                    <Button variant="contained" color="secondary" style={{width: "200px", height: "200px"}}>Sith</Button>
+                    <Button variant="contained" color="secondary" style={{width: "200px", height: "200px", marginLeft: "100px"}}>Sith</Button>
                 </Link>
             </CardContent>
         </Card>

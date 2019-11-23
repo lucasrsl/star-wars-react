@@ -8,43 +8,44 @@ import Image from '../Image/Image';
 
 
 const Char = (props) => { 
-    const characters = require('../../assets/characters.json').chars;
-    console.log(characters);
-    
-
     let data = {
         name: "",
-        gender: ""
+        gender: "",
+        order: ""
     }
 
     if(props.location.data) {
         data = props.location.data[0];
     }
+
+    const characters = require('../../assets/characters.json').chars.filter(c => {
+        return c.gender === data.gender && c.order === data.order;
+    });
     
     return (
         <Card>
             <CardContent style={{padding: "20px", display: "block"}}>
-                <GridList cellHeight={180} style={{width: 1000, height: 600,}}>
+                <GridList cellHeight={180} style={{width: 800, height: 600,}}>
                     <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-                        <ListSubheader component="div">Perçonagens</ListSubheader>
+                        <ListSubheader component="div">Personagens</ListSubheader>
                     </GridListTile>
                 {characters.map(c => {
-                    return(
-                            <GridListTile key={c.picture}>
-                                <Link to={{
-                                        pathname: "/result",
-                                        data: [{
-                                            name: data.name,
-                                            charName: c.name
-                                        }]
-                                    }}>
-                                    <Image name={c.picture} />
-                                </Link>
-                                <GridListTileBar
-                                    title={c.name}
-                                />
-                            </GridListTile>
-                        );
+                        return(
+                                <GridListTile key={c.picture}>
+                                    <Link to={{
+                                            pathname: "/result",
+                                            data: [{
+                                                name: data.name,
+                                                charName: c.name
+                                            }]
+                                        }}>
+                                        <Image name={c.picture} />
+                                    </Link>
+                                    <GridListTileBar
+                                        title={c.name}
+                                    />
+                                </GridListTile>
+                            );
                     })
                 }
                 </GridList>
